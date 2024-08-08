@@ -2,7 +2,7 @@
 
 
 <table>
-    <thead>
+    <thead *ngIf="(users != undefined && users.length > 0) else isEmpty">
         <tr>
             <th>id</th>
          <th>name</th>
@@ -15,3 +15,9 @@
         </tr>
      </tbody>
 </table>
+
+<ng-template #isEmpty> 
+    <div>
+        No existe registro en el sistema
+    </div>
+</ng-template>
