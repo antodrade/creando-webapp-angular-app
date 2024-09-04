@@ -4,6 +4,8 @@
 
 @if (visible){
 
+<div>Total: {{counter}} </div>
+
 <h2> {{title}} </h2>
 
 @if (users != undefined && users.length > 0){
@@ -33,6 +35,8 @@
 <h2>Lo sentimos no está disponible la página!</h2>
 
 }
+
+<app-counter [title]="subTitle" (counterEmmit)="setCounter($event)"></app-counter>
 <!-- <div *ngIf="visible; else notEnable">
 <h2> {{title}} </h2>
 </div>
