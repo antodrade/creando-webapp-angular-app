@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class CounterComponent implements OnInit {
 
-  counter: number = 0;
+  counter: number = 0 ;
 
   
   @Input() title!: string;
